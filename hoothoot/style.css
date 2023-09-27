@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #D3DEDC;
+    --hoothoot-color: #BF9270;
+    --hoothoot-belly: #FFEDDB;
+    --hoothoot-beak: #E3B7A0;
+    --hoothoot-eye: #F0ECE3;
+}
+
+body{
+    background-image: url(img/moon-en-boom.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hoothoot{
+    position: relative;
+}
+
+.hoothoot:hover > .hoothoot__eye > .hoothoot__shut{
+    transform: scaleY(0);
+}
+
+.hoothoot__body{
+    height: 400px;
+    width: 400px;
+    background: var(--hoothoot-color);
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.hoothoot__belly{
+    width: 110%;
+    height: 100%;
+    background: var(--hoothoot-belly);
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(1px);
+}
+
+.hoothoot__eye{
+    height: 170px;
+    width: 170px;
+    background: var(--hoothoot-eye);
+    position: absolute;
+    border-radius: 50%;
+    top: 12%;
+    border: 20px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hoothoot__eye--left{
+    left: 9%;
+}
+
+.hoothoot__eye--right{
+    right: 9%;
+}
+
+.hoothoot__pupil{
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+}
+
+.hoothoot__shut{
+    width: 100%;
+    height: 100%;
+    background: var(--hoothoot-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: scaleY(1);
+    transition: 0.4s all;
+    transform-origin: top center;
+    border-bottom: 5px solid black;
+}
+
+.hoothoot__eyelid{
+    position: absolute;
+    background: black;
+    width: 30px;
+    height: 50px;
+}
+
+.hoothoot__eyelid--first{
+    top: 40%;
+    left: 10%;
+    transform: rotate(50deg);
+}
+
+.hoothoot__eyelid--second{
+    height: 55px;
+    left: 19%;
+    top: 48%;
+    transform: rotate(20deg);
+}
+
+.hoothoot__eyelid--third{
+    left: 33%;
+    top: 45%;
+    transform: rotate(-20deg);
+}
+
+.hoothoot__eyelid--fourth{
+    right: 33%;
+    top: 45%;
+    transform: rotate(20deg);
+}
+
+.hoothoot__eyelid--fifth{
+    right: 19%;
+    top: 48%;
+    height: 55px;
+    transform: rotate(-20deg);
+}
+
+.hoothoot__eyelid--sixth{
+    top: 40%;
+    right: 10%;
+    transform: rotate(-50deg);
+}
+
+.hoothoot__beak{
+    width: 55px;
+    height: 90px;
+    background: var(--hoothoot-beak);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    z-index: 2;
+    transform: translate(-50%);
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+.hoothoot__mouth{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    transform: rotate(-45deg);
+}
+
+.hoothoot__eyebrow{
+    width: 25px;
+    height: 190px;
+    background: black;
+    position: absolute;
+    top: -11%;
+    transform: rotate(-50deg);
+}
+
+.hoothoot__eyebrow--left{
+    left: 35%;
+    transform: rotate(-50deg);
+}
+
+.hoothoot__eyebrow--right{
+    right: 35%;
+    transform: rotate(50deg);
+}
+
+.hoothoot__pointer{
+    width: 110px;
+    height: 160px;
+    background: black;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 80%, 60% 100%, 40% 100%, 0% 80%);
+    top: -33%;
+}
+
+.hoothoot__pointer--left{
+    left: -7%;
+    transform: rotate(-50deg);
+}
+
+.hoothoot__pointer--right{
+    right: -7%;
+    transform: rotate(50deg);
+}

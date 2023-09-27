@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variable */
+:root{
+    --base-color: hsl(222, 96%, 79%);
+    --background-color: hsl(222, 87%, 75%);
+    --dark-base-color: hsl(222, 96%, 69%);
+    --heart-color: hsl(222, 77%, 63%);
+    --dark-base-color-shadow: rgba(109, 100, 241, 0.4);
+}
+
+body{
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sphere3D{
+    position: relative
+
+}
+
+.sphere{
+    width: 400px;
+    height: 400px;
+    background:var(--base-color);
+    border-radius: 50%;
+    background: linear-gradient(var(--base-color),50%,var(--dark-base-color));
+    position: relative;
+    box-shadow: inset 60px 0px 25px 1px rgba(83, 72, 230, 0.4);
+    /* naar rechts, boven/onder, blur, spread (hoe groot de schaduw moet zijn) */
+}
+
+.heart{
+    position: absolute;
+    transform: rotate(45deg);
+    top: 35%;
+    left: 50%;
+}
+
+.block{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background: var(--heart-color);
+}
+
+.block--second{
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.block--third{
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.shadow{
+    width: 420px;
+    height: 100px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform:translateX(-50%);
+    filter:blur(5px);
+    background: var(--dark-base-color-shadow);
+}
